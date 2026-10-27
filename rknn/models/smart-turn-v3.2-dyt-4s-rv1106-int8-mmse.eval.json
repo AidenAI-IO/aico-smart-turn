@@ -1,0 +1,8 @@
+{
+  "samples": 1000,
+  "accuracy_onnx_fp32": 0.928,
+  "accuracy_rknn": 0.928,
+  "decision_agreement": 0.992,
+  "prob_mean_abs_diff": 0.017505374697968364,
+  "prob_max_abs_diff": 0.42103496193885803
+}

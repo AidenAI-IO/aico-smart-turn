@@ -85,6 +85,14 @@ From the Smart Turn source repository, obtain the files `model.py` and `inferenc
 
 https://github.com/pipecat-ai/smart-turn/blob/main/predict.py
 
+### On Rockchip RV1103/RV1106 (RKNN NPU)
+
+[`rknn/`](rknn/README.md) contains int8 `.rknn` models for the RV1106 NPU, a
+script that rebuilds them from the released weights, and C code to run them
+on the board. The recommended model is a fine-tuned, LayerNorm-free variant
+with a 4-second input window. On an RV1106 it runs in about 73 ms, at the
+same accuracy as v3.2.
+
 ### Notes on input format
 
 Smart Turn takes 16kHz mono PCM audio as input. Up to 8 seconds of audio is supported, and we recommend providing the full audio of the user's current turn.

@@ -1,0 +1,22 @@
+{
+  "original_fp32": {
+    "accuracy": 0.932
+  },
+  "dyt_fp32": {
+    "accuracy": 0.928,
+    "agreement_with_original": 0.956,
+    "prob_mean_abs_diff": 0.048969902098178864
+  },
+  "args": {
+    "command": "train",
+    "seconds": 4,
+    "epochs": 6,
+    "batch_size": 32,
+    "lr": 0.0001,
+    "gain": 4.0,
+    "label_weight": 0.5,
+    "hidden_weight": 1.0,
+    "device": "mps",
+    "seed": 0
+  }
+}
