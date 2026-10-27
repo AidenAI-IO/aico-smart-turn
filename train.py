@@ -191,8 +191,11 @@ class ONNXCalibrationDataReader(CalibrationDataReader):
             return None
 
 
-def export_to_onnx_fp32(model, output_path, config):
-    """Export model to ONNX FP32 format"""
+def export_to_onnx_fp32(model, output_path, config, n_frames=800):
+    """Export model to ONNX FP32 format
+
+    n_frames is the mel-frame length of the input (800 for 8 seconds).
+    """
     try:
         log.info("Exporting model to ONNX FP32...")
 
@@ -210,8 +213,8 @@ def export_to_onnx_fp32(model, output_path, config):
 
         export_model = ONNXExportWrapper(model).eval().cpu()
 
-        example_input_b1 = torch.randn(1, 80, 800)
-        example_input_b2 = torch.randn(2, 80, 800)
+        example_input_b1 = torch.randn(1, 80, n_frames)
+        example_input_b2 = torch.randn(2, 80, n_frames)
 
         # Test with both batch size 1 and 2 to ensure consistent output shapes
         with torch.no_grad():

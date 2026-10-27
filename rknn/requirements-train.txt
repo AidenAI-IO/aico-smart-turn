@@ -1,0 +1,15 @@
+# Environment for replace_layernorm.py (runs outside the conversion container,
+# Python 3.12). Pinned to the versions that trained the model in rknn/models/.
+# train.py's imports (wandb, scikit-learn, datasets) are needed because the
+# script reuses SmartTurnV3Model and export_to_onnx_fp32 from it.
+torch==2.14.1
+transformers==5.20.2
+onnx==1.23.2
+onnxruntime==1.31.0
+onnxscript==0.7.2
+pyarrow==26.0.0
+soundfile==0.14.0
+numpy==2.5.4
+wandb==0.31.0
+scikit-learn==1.9.1
+datasets==5.1.0

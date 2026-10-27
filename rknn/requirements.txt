@@ -1,0 +1,10 @@
+# Conversion container (see Dockerfile). Pinned to the versions that produced
+# the models in rknn/models/.
+rknn-toolkit2==2.5.0
+onnx==1.18.0
+onnxruntime==1.23.2
+onnxsim==0.7.3
+numpy==1.26.4
+pyarrow==25.0.1
+soundfile==0.14.0
+transformers==5.20.2
